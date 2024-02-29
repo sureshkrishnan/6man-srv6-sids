@@ -15,9 +15,9 @@ Abstract
 
    The data plane for Segment Routing over IPv6 (SRv6) is built using
    IPv6 as the underlying forwarding plane.  Due to this underlying use
-   of IPv6, Segment Identifiers (SIDs) used by SRv6 can resemble IPv6
-   addresses and behave like them while exhibiting slightly different
-   behaviors in some situations.  This document explores the
+   of IPv6, Segment Identifiers (SIDs) used by SRv6 behave like IPv6
+   addresses outside the SR domain while exhibiting slightly different
+   behaviors inside the SR domain.  This document explores the
    characteristics of SRv6 SIDs and focuses on the relationship of SRv6
    SIDs to the IPv6 Addressing Architecture.  This document allocates
    and makes a dedicated prefix available for SRv6 SIDs.
@@ -90,7 +90,9 @@ Table of Contents
    header, and SR segment endpoint nodes process a local segment present
    in the Destination Address of an IPv6 header.  Thus Segment
    Identifiers (SIDs) in SRv6 can and do appear in the Destination
-   Address of IPv6 datagrams by design.  This document explores the
+   Address of IPv6 datagrams by design. While these destination addresses
+   are processed by SRv6 unaware IPv6 nodes they are treated as routing 
+   prefixes as described in Section 3. This document explores the
    characteristics of SRv6 SIDs and focuses on the relationship of SRv6
    SIDs to the IPv6 Addressing Architecture [RFC4291].  This document
    allocates and makes a dedicated prefix available for SRv6 SIDs.
